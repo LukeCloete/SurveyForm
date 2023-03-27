@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>BakeMeNow Survey Form</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1 class="title text-center">BakeMeNow Survey Form</h1>
+        <p class="description text-center">Thank you for taking the time to help us improve your experience</p>
+      </header>
+      <form id="survey-form">
+        <div class="form-item">
+          <label id ="name-label" for="name"> Name </label>   
+          <input class="form-interact" id="name" type="text" placeholder="Enter your name" required />
+        </div>
+        <div class="form-item">
+          <label id="email-label" for="email"> Email </label> 
+          <input class="form-interact" id="email" type="email" placeholder="Enter your email" required />
+        </div>
+        <div class="form-item">
+          <label id="number-label" for="number"> Age<span class="info"> (optional) </span></label>
+          <input class="form-interact" id="number" type="number" min="13" max="120" placeholder="Age" />
+        </div>
+        <div class="form-item">
+          <p>Which option best describes your current role?</p>
+          <select id="dropdown"  class="form-interact" required>
+            <option disable selected value> Select current role </option>
+            <option value="Student"> Student </option>
+            <option value="Full Time Job"> Full Time Job </option>
+            <option value="Unemployed"> Unemployed </option>
+            <option value="PreferNot"> Prefer not to say </option>
+            <option value="Other"> Other </Option>
+          </select>
+        </div>
+        <div class="form-item">
+          <p>Would you recommend BakeMeNow to a friend?</p>
+          <label>
+            <input name="user-recommend" value="definitely" type="radio" class="input-radio" checked />
+            Definitely</label>
+          <label>
+            <input name="user-recommend" value="perhaps" type="radio" class="input-radio" />
+            Perhaps</label>
+          <label><input name="user-recommend" value="nah" type="radio" class="input-radio" />
+            Nah</label>
+        </div>
+        <div class="form-item">
+          <p>What is your favorite feature of BakeMeNow?</p>
+          <select id="fav-feature" name="mostLike" class="form-interact" required>
+            <option disabled selected value>Select an option</option>
+            <option value="foodSelection">The food selection</option>
+            <option value="convinience">Convinience</option>
+            <option value="prices">Prices</option>
+            <option value="userExperience">User experience</option>
+          </select>
+        </div>
+        <div class="form-item">
+          <p>
+            What would you like to see improved?
+            <span class="info">(Check all that apply)</span>
+          </p>
+          <label>
+            <input name="improvement" value="menu" type="checkbox" class="input-checkbox" />
+            Food variety
+          </label>
+          <label>
+            <input name="improvement" value="user-interface" type="checkbox" class="input-checkbox" />
+            User Interface
+          </label>
+          <label>
+            <input name="improvement" value="account-management" type="checkbox" class="input-checkbox" />
+            Account Management
+          </label>
+          <label>
+            <input name="improvement" value="ease-of-use" type="checkbox" class="input-checkbox" />
+            Ease of Use
+          </label>
+          <label>
+            <input name="improvement" value="notifications" type="checkbox" class="input-checkbox" />
+            Notifications
+          </label>
+          <label>
+            <input name="improvement" value="features" type="checkbox" class="input-checkbox" />
+            Features
+          </label>
+        </div>
+        <div class="form-item">
+          <p>Any comments or suggestions?</p>
+          <textarea
+            id="comments"
+            class="input-textarea"
+            name="comment"
+            placeholder="Enter your comment here..."
+          ></textarea>
+        </div>
+        <div class="form-item">
+          <button type="submit" id="submit" class="submit-button">
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
